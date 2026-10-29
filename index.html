@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online percentage calculator for marks, percentages, and percentage changes.">
+  <title>PercentPro - Percentage Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo"><span>%</span> PercentPro</a>
+    <span class="nav-label">FREE ONLINE TOOL</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">YOUR EVERYDAY MATH TOOL</span>
+      <h1>Percentage Calculator<span>.</span></h1>
+      <p>Calculate percentages, check your marks, and track changes in seconds.</p>
+    </section>
+
+    <section class="cards">
+      <!-- Normal percentage -->
+      <article class="card">
+        <div class="card-icon purple">%</div>
+        <h2>Percentage of a Number</h2>
+        <p class="description">Find what percentage of a number is worth.</p>
+
+        <form id="normalForm">
+          <label for="percent">Percentage (%)</label>
+          <input id="percent" type="number" min="0" step="any"
+            placeholder="e.g. 20" required>
+
+          <label for="baseNumber">Number</label>
+          <input id="baseNumber" type="number" min="0" step="any"
+            placeholder="e.g. 500" required>
+
+          <button type="submit" class="btn">Calculate Percentage</button>
+        </form>
+        <div class="result" id="normalResult" aria-live="polite">
+          <span>YOUR RESULT</span>
+          <strong>—</strong>
+        </div>
+      </article>
+
+      <!-- Marks percentage -->
+      <article class="card">
+        <div class="card-icon green">✓</div>
+        <h2>Marks Percentage</h2>
+        <p class="description">Calculate your score out of total marks.</p>
+
+        <form id="marksForm">
+          <label for="obtained">Obtained Marks</label>
+          <input id="obtained" type="number" min="0" step="any"
+            placeholder="e.g. 420" required>
+
+          <label for="total">Total Marks</label>
+          <input id="total" type="number" min="0" step="any"
+            placeholder="e.g. 500" required>
+
+          <button type="submit" class="btn">Calculate Marks %</button>
+        </form>
+        <div class="result" id="marksResult" aria-live="polite">
+          <span>YOUR RESULT</span>
+          <strong>—</strong>
+        </div>
+      </article>
+
+      <!-- Percentage change -->
+      <article class="card">
+        <div class="card-icon orange">↗</div>
+        <h2>Percentage Change</h2>
+        <p class="description">Compare an original value with a new value.</p>
+
+        <form id="changeForm">
+          <label for="oldValue">Original Value</label>
+          <input id="oldValue" type="number" min="0" step="any"
+            placeholder="e.g. 100" required>
+
+          <label for="newValue">New Value</label>
+          <input id="newValue" type="number" min="0" step="any"
+            placeholder="e.g. 125" required>
+
+          <button type="submit" class="btn">Calculate Change</button>
+        </form>
+        <div class="result" id="changeResult" aria-live="polite">
+          <span>YOUR RESULT</span>
+          <strong>—</strong>
+        </div>
+      </article>
+    </section>
+
+    <section class="history card">
+      <div class="history-heading">
+        <div>
+          <h2>Calculation History</h2>
+          <p class="description">Your recent calculations appear here.</p>
+        </div>
+        <button type="button" id="clearHistory" class="btn-secondary">
+          Clear History
+        </button>
+      </div>
+      <p id="emptyHistory" class="empty">No calculations yet. Try a calculator above!</p>
+      <ul id="historyList" class="history-list"></ul>
+    </section>
+
+    <section class="info card">
+      <h2>Percentage formulas</h2>
+      <p><strong>Normal percentage:</strong> (Percentage ÷ 100) × Number</p>
+      <p><strong>Marks percentage:</strong> (Obtained marks ÷ Total marks) × 100</p>
+      <p><strong>Percentage change:</strong> ((New value − Original value) ÷ Original value) × 100</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> PercentPro · Made for easy calculations.</p>
+  </footer>
+</body>
+</html>
